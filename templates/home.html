@@ -10,15 +10,23 @@
           height: 360px;
           width: 100%;
           object-fit: cover;
+          margin-bottom: 16px;
         }
       </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class = 'img-fluid' id = 'banner' src = '../static/banner.jpg'>
     <div class = 'container'>
       <h1 class = 'text-center mt-2 mb-4'>{{company_name}} Careers</h1>
-      <img class = 'img-fluid' id = 'banner' src = '../static/banner.jpg'>
-      <h2 class = 'text-center'>About {{company_name}}</h2>
-      <p class = 'lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Cras fermentum odio eu feugiat pretium nibh ipsum. Non nisi est sit amet facilisis magna. Ut diam quam nulla porttitor massa id neque aliquam. Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed. Quam viverra orci sagittis eu volutpat odio. Gravida rutrum quisque non tellus orci ac. Erat pellentesque adipiscing commodo elit at. Purus semper eget duis at tellus at urna condimentum mattis. Arcu dictum varius duis at consectetur.</p>
+      <div class = 'row' style = 'margin-bottom:16px;'>
+        <div class = 'col-6'>
+          <p class = 'lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Cras fermentum odio eu feugiat pretium nibh ipsum. Non nisi est sit amet facilisis magna. Ut diam quam nulla porttitor massa id neque aliquam. Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed. Quam viverra orci sagittis eu volutpat odio. Gravida rutrum quisque non tellus orci ac. Erat pellentesque adipiscing commodo elit at. Purus semper eget duis at tellus at urna condimentum mattis. Arcu dictum varius duis at consectetur.</p>
+        </div>
+        <div class = 'd-none d-md-block col-md-6'>
+          <img src = '/static/people.jpg' style = 'height:320px; border-radius: 4px;'>
+        </div>
+      </div>
       <h2 class = 'text-center mt-2 mb-4'>Open Positions</h2>
       <div>
         <p>
@@ -28,9 +36,10 @@
         </p>
       </div>
       <div class='text-center'>
-        <button class='btn btn-primary btn-lg'>Contact Us</button>
+        <a href = ' mailto:hello@cloud9.com?subject=Question%20about%20Job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E' class='btn btn-primary btn-lg'>Contact Us</a>
         <p class='mt-4'>Copyright 2022, Cloud9</p>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
